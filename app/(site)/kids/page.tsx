@@ -14,37 +14,43 @@ const games = [
     title: 'Memory Match',
     text: 'Flip the cards and find all the matching pairs.',
     icon: Brain,
-    bg: 'bg-sage-soft',
+    bg: 'bg-[#e2f0e7]',
+    iconBg: 'bg-[#b7d9c2]',
   },
   {
     href: '/kids/math',
     title: 'Math Dash',
     text: 'Solve as many sums as you can before the timer runs out.',
     icon: Calculator,
-    bg: 'bg-sun-soft',
+    bg: 'bg-[#fff0c9]',
+    iconBg: 'bg-[#f5d77d]',
   },
   {
     href: '/kids/words',
     title: 'Word Scramble',
     text: 'Unscramble the letters to find the hidden word.',
     icon: Shuffle,
-    bg: 'bg-secondary',
+    bg: 'bg-[#e4e8f8]',
+    iconBg: 'bg-[#c3ccef]',
   },
   {
     href: '/kids/learn',
     title: 'A to Z Fun Facts',
     text: 'Flip learning cards to discover amazing facts.',
     icon: BookOpen,
-    bg: 'bg-accent',
+    bg: 'bg-[#f7e1df]',
+    iconBg: 'bg-[#edbbb7]',
   },
 ]
 
 export default function KidsPage() {
   return (
     <main className="page-enter">
-      <section className="bg-sun-soft px-5 py-14 md:px-9 md:py-20">
-        <div className="mx-auto flex max-w-7xl flex-col items-start gap-6">
-          <span className="rounded-full bg-sun px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary">
+      <section className="relative overflow-hidden bg-[#eef4e8] px-5 py-14 md:px-9 md:py-20">
+        <div className="pointer-events-none absolute -right-20 -top-24 size-72 rounded-full bg-[#d7e8d4]" aria-hidden="true" />
+        <div className="pointer-events-none absolute bottom-[-5rem] left-[38%] size-44 rounded-full bg-[#f8df9f]/70" aria-hidden="true" />
+        <div className="relative mx-auto flex max-w-7xl flex-col items-start gap-5">
+          <span className="rounded-full bg-white/80 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary shadow-sm">
             Kids Zone
           </span>
           <h1 className="max-w-3xl text-balance font-serif text-5xl leading-[1.02] text-primary md:text-7xl">
@@ -54,6 +60,10 @@ export default function KidsPage() {
             Quizzes, puzzles and games made for curious minds. Earn stars, beat your best score and learn something new
             every day.
           </p>
+          <div className="flex items-center gap-2 pt-1 text-sm font-semibold text-primary">
+            <span className="grid size-7 place-items-center rounded-full bg-[#f5d77d] text-xs" aria-hidden="true">★</span>
+            Choose an activity to get started
+          </div>
         </div>
       </section>
 
@@ -69,7 +79,7 @@ export default function KidsPage() {
             <Link
               key={topic.id}
               href={`/kids/quiz/${topic.id}`}
-              className="group flex flex-col justify-between gap-6 rounded-3xl border-2 border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-sun hover:shadow-lg"
+              className="group flex min-h-52 flex-col justify-between gap-6 rounded-2xl border border-border/80 bg-card p-6 shadow-[0_5px_0_rgba(49,88,68,0.08)] transition-all hover:-translate-y-1 hover:border-sun hover:shadow-lg"
             >
               <div>
                 {topic.id === 'safety' && <ShieldCheck className="mb-3 size-6 text-sage" aria-hidden="true" />}
@@ -91,13 +101,13 @@ export default function KidsPage() {
             Games and Activities
           </h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            {games.map(({ href, title, text, icon: Icon, bg }) => (
+            {games.map(({ href, title, text, icon: Icon, bg, iconBg }) => (
               <Link
                 key={href}
                 href={href}
-                className={`group flex items-center gap-5 rounded-3xl p-6 transition-transform hover:-translate-y-1 md:p-8 ${bg}`}
+                className={`group flex items-center gap-5 rounded-2xl p-6 shadow-[0_5px_0_rgba(49,88,68,0.08)] transition-transform hover:-translate-y-1 md:p-8 ${bg}`}
               >
-                <span className="grid size-16 shrink-0 place-items-center rounded-2xl bg-card text-primary shadow-sm">
+                <span className={`grid size-16 shrink-0 place-items-center rounded-2xl text-primary shadow-sm ${iconBg}`}>
                   <Icon className="size-8" aria-hidden="true" />
                 </span>
                 <div className="flex-1">
