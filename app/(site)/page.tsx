@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ArrowRight, Gamepad2, QrCode, ShieldCheck, Sparkles } from 'lucide-react'
 import { Eyebrow, PillLink } from '@/components/site/primitives'
 import { HeroIllustration } from '@/components/site/hero-illustration'
+import { Gallery3D } from '@/components/site/gallery-3d'
 import { initiativeGroups } from '@/lib/site-data'
 
 const stats = [
@@ -109,6 +110,8 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      <Gallery3D />
 
       <section className="bg-accent px-5 py-16 md:px-9 md:py-24">
         <div className="mx-auto max-w-7xl">
