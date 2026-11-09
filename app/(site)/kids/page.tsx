@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, BookOpen, Brain, Calculator, Puzzle, ShieldCheck, Shuffle } from 'lucide-react'
+import { ArrowRight, BookOpen, Brain, Calculator, Hand, Puzzle, ShieldCheck, Shuffle } from 'lucide-react'
 import { quizTopics } from '@/lib/kids-data'
 
 export const metadata: Metadata = {
@@ -40,6 +40,14 @@ const games = [
     icon: BookOpen,
     bg: 'bg-[#f7e1df]',
     iconBg: 'bg-[#edbbb7]',
+  },
+  {
+    href: '/kids/fingers',
+    title: 'Finger Count',
+    text: 'Show numbers with your fingers and learn by doing.',
+    icon: Hand,
+    bg: 'bg-[#e6eef3]',
+    iconBg: 'bg-[#bfd8e5]',
   },
 ]
 
