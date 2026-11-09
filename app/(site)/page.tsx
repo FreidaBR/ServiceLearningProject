@@ -19,11 +19,11 @@ export default function HomePage() {
           <div>
             <Eyebrow>A community that shows up</Eyebrow>
             <h1 className="max-w-[680px] text-balance font-serif text-[clamp(3rem,7vw,6.2rem)] leading-[.99] tracking-[-.04em] text-primary">
-              Making a Difference, Together.
+              Making a Difference.
             </h1>
             <p className="mt-7 max-w-lg text-base leading-8 text-muted-foreground md:text-lg">
-              People for Passion works towards creating positive change by supporting women, children,
-              specially-abled communities, the LGBTQIA+ community, environmental causes and underserved communities.
+              People for Passion is a registered non-profit made up of passionate people working together to create
+              positive change in society — through care, inclusion, and practical support for communities that need it.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <PillLink href="/contact">
@@ -49,8 +49,8 @@ export default function HomePage() {
           </div>
           <div className="flex flex-col justify-end">
             <p className="max-w-2xl text-lg leading-8 text-muted-foreground">
-              We believe meaningful service starts by listening. From sharing essentials to making room for inclusion,
-              our community works side by side to help people feel seen and supported.
+              We believe meaningful service starts by listening. From food drives and essential supplies to inclusion
+              and environmental action, our volunteers work side by side to help people feel seen and supported.
             </p>
             <Link href="/about" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary">
               More about us <ArrowRight className="size-4" aria-hidden="true" />
@@ -143,10 +143,10 @@ export default function HomePage() {
 
       <section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-[1fr_.9fr] md:px-9 md:py-24">
         <div className="bg-primary p-8 text-primary-foreground md:p-12">
-          <Eyebrow light>A note from our community</Eyebrow>
-          <p className="font-serif text-3xl leading-snug md:text-4xl">
-            {'"Volunteers do not necessarily have the time; they just have the Heart."'}
-          </p>
+              <Eyebrow light>A note from our community</Eyebrow>
+              <p className="font-serif text-3xl leading-snug md:text-4xl">
+                {'"Volunteers do not necessarily have the time; they just have the Heart."'}
+              </p>
         </div>
         <div className="flex flex-col justify-center">
           <Eyebrow>Make a place for care</Eyebrow>
