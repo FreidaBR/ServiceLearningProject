@@ -33,10 +33,10 @@ export function AuthForm({ mode }: { mode: 'sign-in' | 'sign-up' }) {
   }
 
   return (
-    <main className="flex min-h-dvh items-center justify-center px-5 py-12">
-      <div className="w-full max-w-md rounded-3xl border border-border bg-card p-8 shadow-sm">
+    <main className="flex min-h-dvh items-center justify-center bg-secondary px-5 py-12">
+      <div className="w-full max-w-md border border-border bg-card p-8 shadow-sm">
         <Wordmark />
-        <h1 className="mt-8 font-serif text-4xl text-primary">{isSignUp ? 'Create admin' : 'Admin sign in'}</h1>
+        <h1 className="mt-8 font-serif text-4xl text-primary">{isSignUp ? 'Create account' : 'Sign in'}</h1>
         <p className="mt-2 text-sm leading-6 text-muted-foreground">
           {isSignUp
             ? 'Set up the first administrator account. Registration closes after this.'
@@ -46,7 +46,7 @@ export function AuthForm({ mode }: { mode: 'sign-in' | 'sign-up' }) {
           {isSignUp && (
             <div>
               <label htmlFor="name" className={labelClass}>
-                Full name
+                Name
               </label>
               <input id="name" name="name" required autoComplete="name" className={inputClass} />
             </div>

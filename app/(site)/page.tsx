@@ -59,7 +59,7 @@ export default function HomePage() {
         </div>
         <div className="grid gap-4 pt-8 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map(([value, label]) => (
-            <div key={label} className="rounded-3xl border border-border bg-muted px-6 py-7">
+            <div key={label} className="border-t border-border px-2 py-6">
               <p className="font-serif text-4xl text-primary">{value}</p>
               <p className="mt-2 text-sm text-muted-foreground">{label}</p>
             </div>
@@ -72,7 +72,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-2">
           <Link
             href="/kids"
-            className="group relative flex flex-col justify-between gap-10 overflow-hidden rounded-[2rem] bg-sun-soft p-8 md:p-10"
+            className="group relative flex flex-col justify-between gap-10 overflow-hidden border border-border bg-sun-soft p-8 md:p-10"
           >
             <div>
               <span className="inline-flex items-center gap-2 rounded-full bg-sun px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
@@ -90,7 +90,7 @@ export default function HomePage() {
           </Link>
           <Link
             href="/safety"
-            className="group flex flex-col justify-between gap-10 rounded-[2rem] bg-primary p-8 text-primary-foreground md:p-10"
+            className="group flex flex-col justify-between gap-10 bg-primary p-8 text-primary-foreground md:p-10"
           >
             <div>
               <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-3 py-1 text-xs font-bold uppercase tracking-wider">
@@ -142,7 +142,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-[1fr_.9fr] md:px-9 md:py-24">
-        <div className="rounded-[2rem] bg-primary p-8 text-primary-foreground md:p-12">
+        <div className="bg-primary p-8 text-primary-foreground md:p-12">
           <Eyebrow light>A note from our community</Eyebrow>
           <p className="font-serif text-3xl leading-snug md:text-4xl">
             {'"Volunteers do not necessarily have the time; they just have the Heart."'}

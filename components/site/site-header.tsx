@@ -18,7 +18,7 @@ const links = [
 export function Wordmark({ inverse = false }: { inverse?: boolean }) {
   return (
     <Link href="/" className={cn('flex items-center gap-3', inverse ? 'text-primary-foreground' : 'text-primary')}>
-      <span className="grid size-10 place-items-center rounded-full bg-sage-soft text-sage">
+      <span className="grid size-10 place-items-center border border-sage/30 bg-sage-soft text-sage">
         <HeartHandshake className="size-5" aria-hidden="true" />
       </span>
       <span className="leading-tight">
