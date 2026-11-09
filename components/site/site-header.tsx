@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { HeartHandshake, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const links = [
@@ -18,9 +18,6 @@ const links = [
 export function Wordmark({ inverse = false }: { inverse?: boolean }) {
   return (
     <Link href="/" className={cn('flex items-center gap-3', inverse ? 'text-primary-foreground' : 'text-primary')}>
-      <span className="grid size-10 place-items-center rounded-full bg-sage-soft text-sage">
-        <HeartHandshake className="size-5" aria-hidden="true" />
-      </span>
       <span className="leading-tight">
         <b className="block text-[15px] tracking-tight">People for Passion</b>
         <span className="text-[10px] uppercase tracking-[.19em] opacity-75">People. Purpose. Possibility.</span>

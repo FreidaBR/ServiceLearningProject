@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ArrowRight, Gamepad2, QrCode, ShieldCheck, Sparkles } from 'lucide-react'
 import { Eyebrow, PillLink } from '@/components/site/primitives'
 import { HeroIllustration } from '@/components/site/hero-illustration'
+import { Gallery3D } from '@/components/site/gallery-3d'
 import { initiativeGroups } from '@/lib/site-data'
 
 const stats = [
@@ -19,11 +20,11 @@ export default function HomePage() {
           <div>
             <Eyebrow>A community that shows up</Eyebrow>
             <h1 className="max-w-[680px] text-balance font-serif text-[clamp(3rem,7vw,6.2rem)] leading-[.99] tracking-[-.04em] text-primary">
-              Making a Difference, Together.
+              Making a Difference.
             </h1>
             <p className="mt-7 max-w-lg text-base leading-8 text-muted-foreground md:text-lg">
-              People for Passion works towards creating positive change by supporting women, children,
-              specially-abled communities, the LGBTQIA+ community, environmental causes and underserved communities.
+              People for Passion is a registered non-profit made up of passionate people working together to create
+              positive change in society — through care, inclusion, and practical support for communities that need it.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <PillLink href="/contact">
@@ -49,8 +50,8 @@ export default function HomePage() {
           </div>
           <div className="flex flex-col justify-end">
             <p className="max-w-2xl text-lg leading-8 text-muted-foreground">
-              We believe meaningful service starts by listening. From sharing essentials to making room for inclusion,
-              our community works side by side to help people feel seen and supported.
+              We believe meaningful service starts by listening. From food drives and essential supplies to inclusion
+              and environmental action, our volunteers work side by side to help people feel seen and supported.
             </p>
             <Link href="/about" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary">
               More about us <ArrowRight className="size-4" aria-hidden="true" />
@@ -59,7 +60,7 @@ export default function HomePage() {
         </div>
         <div className="grid gap-4 pt-8 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map(([value, label]) => (
-            <div key={label} className="rounded-3xl border border-border bg-muted px-6 py-7">
+            <div key={label} className="border-t border-border px-2 py-6">
               <p className="font-serif text-4xl text-primary">{value}</p>
               <p className="mt-2 text-sm text-muted-foreground">{label}</p>
             </div>
@@ -72,7 +73,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-2">
           <Link
             href="/kids"
-            className="group relative flex flex-col justify-between gap-10 overflow-hidden rounded-[2rem] bg-sun-soft p-8 md:p-10"
+            className="group relative flex flex-col justify-between gap-10 overflow-hidden border border-border bg-sun-soft p-8 md:p-10"
           >
             <div>
               <span className="inline-flex items-center gap-2 rounded-full bg-sun px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
@@ -90,7 +91,7 @@ export default function HomePage() {
           </Link>
           <Link
             href="/safety"
-            className="group flex flex-col justify-between gap-10 rounded-[2rem] bg-primary p-8 text-primary-foreground md:p-10"
+            className="group flex flex-col justify-between gap-10 bg-primary p-8 text-primary-foreground md:p-10"
           >
             <div>
               <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-3 py-1 text-xs font-bold uppercase tracking-wider">
@@ -109,6 +110,8 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      <Gallery3D />
 
       <section className="bg-accent px-5 py-16 md:px-9 md:py-24">
         <div className="mx-auto max-w-7xl">
@@ -142,11 +145,11 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-[1fr_.9fr] md:px-9 md:py-24">
-        <div className="rounded-[2rem] bg-primary p-8 text-primary-foreground md:p-12">
-          <Eyebrow light>A note from our community</Eyebrow>
-          <p className="font-serif text-3xl leading-snug md:text-4xl">
-            {'"Volunteers do not necessarily have the time; they just have the Heart."'}
-          </p>
+        <div className="bg-primary p-8 text-primary-foreground md:p-12">
+              <Eyebrow light>A note from our community</Eyebrow>
+              <p className="font-serif text-3xl leading-snug md:text-4xl">
+                {'"Volunteers do not necessarily have the time; they just have the Heart."'}
+              </p>
         </div>
         <div className="flex flex-col justify-center">
           <Eyebrow>Make a place for care</Eyebrow>
