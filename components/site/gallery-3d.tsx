@@ -5,14 +5,24 @@ import { ArrowLeft, ArrowRight, Images } from 'lucide-react'
 
 const photos = [
   {
-    src: 'https://peopleforpassion.netlify.app/images/award1.jpg',
-    alt: 'People for Passion receiving a community award',
-    title: 'Celebrating the people who show up',
+    src: 'https://peopleforpassion.netlify.app/images/event-1.jpg',
+    alt: 'People for Passion volunteers gathered at a community event',
+    title: 'Coming together in community',
   },
   {
-    src: 'https://peopleforpassion.netlify.app/images/award2.jpg',
-    alt: 'People for Passion team celebrating together',
-    title: 'Small actions, shared proudly',
+    src: 'https://peopleforpassion.netlify.app/images/event-2.jpg',
+    alt: 'People for Passion volunteers taking part in an event',
+    title: 'Hands-on care in action',
+  },
+  {
+    src: 'https://peopleforpassion.netlify.app/images/event-3.jpg',
+    alt: 'People for Passion community members sharing a moment',
+    title: 'Making space for connection',
+  },
+  {
+    src: 'https://peopleforpassion.netlify.app/images/event-4.jpg',
+    alt: 'People for Passion volunteers supporting their community',
+    title: 'Showing up for one another',
   },
 ]
 
