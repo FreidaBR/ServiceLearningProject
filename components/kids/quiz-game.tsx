@@ -7,14 +7,38 @@ import type { QuizTopic } from '@/lib/kids-data'
 import { cn } from '@/lib/utils'
 import { Stars } from './game-shell'
 
+function shuffleQuestions(topic: QuizTopic) {
+  const questions = topic.questions.map((question) => {
+    const optionOrder = question.options.map((_, optionIndex) => optionIndex)
+    for (let i = optionOrder.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[optionOrder[i], optionOrder[j]] = [optionOrder[j], optionOrder[i]]
+    }
+
+    return {
+      ...question,
+      options: optionOrder.map((optionIndex) => question.options[optionIndex]),
+      answer: optionOrder.indexOf(question.answer),
+    }
+  })
+
+  for (let i = questions.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[questions[i], questions[j]] = [questions[j], questions[i]]
+  }
+
+  return questions
+}
+
 export function QuizGame({ topic }: { topic: QuizTopic }) {
+  const [questions, setQuestions] = useState(() => shuffleQuestions(topic))
   const [index, setIndex] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
   const [done, setDone] = useState(false)
 
-  const q = topic.questions[index]
-  const total = topic.questions.length
+  const q = questions[index]
+  const total = questions.length
 
   function choose(i: number) {
     if (picked !== null) return
